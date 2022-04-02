@@ -1,0 +1,771 @@
+/*
+ * Login: xzatko02
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu (napr. bubliny v sekci #refs)
+ */
+
+ html{
+    min-width: 768px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans';
+}
+
+/*Zmena farby pozadia zvyrazneneho textu. */
+::selection {
+    background: yellowgreen;
+}
+
+/*----------------------------------*/
+/*              HEADER              */
+/*----------------------------------*/
+
+#header{
+    min-height: 400px;
+    background-image: url("../img/header.jpg");
+    background-color: black;
+    height: 100vh;
+    background-position: top 20% left 50%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 0 auto;
+}
+
+#header .content{
+    padding-left: 20px;
+    padding-right: 20px;  
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#header-menu{
+    padding-top: 10px;
+    position: relative;
+    height: 75px;
+}
+
+#header .content{
+    height: 100%;
+    position: relative;
+}
+
+#header-title{
+    top: 66%;
+    margin-top: -150px;
+    position: absolute;
+}
+
+#header-title h1{
+    color: white;
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+#logo{
+    font-family: Special Elite;
+    font-size: 25px;
+    color: steelblue;
+    width: fit-content;
+}
+
+#logo a{
+    text-decoration: none;
+    color: steelblue;
+}
+
+#networks i{
+    color: steelblue;
+    font-size: 28px;
+    width: 35px;
+}
+
+#networks {
+    float: right;
+    margin-top: 20px;
+    padding: 0;
+}
+
+#contacts{
+    float: right;
+    margin-top: -22px;
+    width: 300px;
+}
+
+#contacts #phone{
+    margin-right: 10px;
+}
+
+#contacts i{
+    color: steelblue;
+}
+
+#contacts a{
+    text-decoration: none;
+    color: #898989;
+}
+
+#contacts a:hover, #networks i:hover, #logo a:hover{
+    color: white;
+}
+
+#phone{
+    color: #898989;
+}
+
+#navigation{
+    margin-left: -25px;
+    width: fit-content;
+    position: absolute;
+}
+
+#navigation a{
+    text-decoration: none;
+    color: #898989;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+#navigation ul li{
+    display: inline;
+    padding-right: 20px;
+    float: left;
+}
+/* Zobrazenie borderu po nadideni kurzorom nad jednotlive policka v menu. */
+#navigation ul li a:hover {
+    border: 1px solid #333333;
+    overflow: hidden;
+    margin: -11px;
+    padding: 10px;        
+}
+
+/*Doba prechodu po nadideni kurzorom nad button get-started pomocou transition.*/
+#get-started a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #898989;
+    border-style: solid;
+    border: 2px solid #4d4d4d;
+    border-radius: 20px;
+    padding: 25px;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+#get-started a:hover{
+    background-color: steelblue;
+    color: white;
+}
+
+#get-started{
+    margin-top: 100px;
+}
+
+/*----------------------------------*/
+/*              SERVICES            */
+/*----------------------------------*/
+
+#services .content{
+    height: 950px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+}
+
+.services-card{
+    width: 35%;
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    padding: 15px 15px 10px;
+    box-shadow: 0px 0px 10px 0px #bfbfbf;
+    justify-items: center;
+}
+
+.services-card:hover{
+    box-shadow: 0px 0px 10px 0px steelblue;
+}
+
+.services-card img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    padding: 5px;
+    border-style: solid;
+    border-color: steelblue;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.services-card img:last-child{
+    display: none;
+    position: absolute;
+    margin-top: -57px;
+}
+
+.services-card:hover img:last-child{
+    background-color: steelblue;
+    border-style: solid;
+    border-color: steelblue;
+    border-radius: 5px;
+    width: 45px;
+    margin-left: 120px;
+    display: inline;
+}
+
+.services-card h3{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.services-card p{
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    color: #898989;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+#services .content h2, #contact .content h2, #team .content h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#services h2{
+    text-align: center;
+    font-size: 32px;
+}
+
+#services p{
+    font-size: 14px;
+    text-align: center;
+    color: #898989;
+    line-height: 1.7;
+}
+
+#services .content p:nth-child(2){
+    font-size: 18px;
+    text-align: center;
+    color: #898989;
+    line-height: 1.7;
+}
+
+.services-column{
+    width: 850px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact-submit{
+    background-color: steelblue;
+    color: white;
+}
+
+/*----------------------------------*/
+/*              ABOUT               */
+/*----------------------------------*/
+
+#about{
+    background-color: #f7f7f7;
+    padding: 0 20px 0 20px;
+}
+
+#about .content{
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 1200px;
+}
+
+
+.about-item{
+    height: 350px;
+}
+
+/* Nasledujuci kod umoznuje pridavanie dalsich obrazkov a textov do sekcie #about a zarovnavanie na pravu alebo lavu stranu */
+/* pomocou float a selektorov nth-child(2n+1) pre lichy pocet / nth-child(2n+2) pre sudy pocet. */
+#about .about-item:nth-child(2n+1) img{
+    display: block;
+    width: 38%;
+    float: left;
+    border-radius: 2%;
+    margin-right: 100px;
+    margin-bottom: 60px;
+    transition: 0.5s;
+}
+/* Zvacsenie obrazka po nadidenim kurzoru pomocou selektoru :hover */
+#about .about-item:nth-child(2n+1) img:hover{
+    width: 50%;
+}
+
+#about .about-item:nth-child(2n+2) img{
+    display: block;
+    width: 41%;
+    float: right;
+    border-radius: 2%;
+    margin-left: 100px;
+    transition: 0.5s;
+}
+
+#about .about-item:nth-child(2n+2) img:hover{
+    width: 48%;
+}
+
+.about-item h2{
+    font-size: 40px;
+    padding-top: 15px;
+}
+
+.about-item p{
+    color: #898989;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 10px 0 80px 0;
+}
+
+/*----------------------------------*/
+/*              TEAM                */
+/*----------------------------------*/
+
+#team .content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    overflow: auto;
+}
+
+#team h2{
+    font-size: 32px;
+    text-align: center;
+    margin: 50px 0 40px;
+}
+
+.team-card h3{
+    font-size: 24px;
+    margin: 35px 0 0;
+}
+
+.team-card p{
+    color: #bfbfbf;
+    margin: 0 0 20px;
+}
+
+.team-card h4{
+    color: #898989;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+.team-card img{
+    width: 100%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+
+.team-card{     
+    box-sizing: border-box;
+    width: 22%;
+    text-align: center;
+    display: inline-table;
+    float: left;
+    margin-left: 20px;
+    box-shadow: 0px 0px 10px 0px #bfbfbf;
+}
+
+.team-card:hover{
+    box-shadow: 0px 0px 10px 0px steelblue;
+}
+
+.team-card:hover h3{
+    color: steelblue;
+}
+
+/*----------------------------------*/
+/*              STATS               */
+/*----------------------------------*/
+
+#stats{
+    border-top: 2px dashed #898989;
+    height: 250px;
+}
+
+#stats .content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 60px;
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 768px;
+}
+
+.stats-card{
+    background-color: #4d4d4d;
+    box-sizing: border-box;
+    width: 25%;
+    height: 140px;
+    text-align: center;
+    border-radius: 3%;
+    max-width: 300px;
+}
+
+.stats-card h3{
+    color: white;
+    font-size: 24px;
+}
+
+.stats-card p{
+    color: #898989;
+    font-size: 14px;
+}
+
+/* Zaoblenie ikon v sekcii #stats pomocou border-radius a nasledne napozicovanie ikon na vrch karty. */
+.stats-card i{
+    color: steelblue;
+    font-size: 32px;
+    width: 35px;
+    background-color: white;
+    border: 8px solid white;
+    border-radius: 50%;
+    margin-top: -50px;
+}
+
+.stats-card:hover{
+    background-color: steelblue;
+}
+
+/*----------------------------------*/
+/*              PRICE               */
+/*----------------------------------*/
+
+#price{
+    background-color: #f7f7f7;
+}
+
+#price .content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+#price h2{
+    text-align: center;
+    font-size: 32px;
+    padding-bottom: 50px;
+}
+
+#price table{
+    width: 80%;
+    border-spacing:0 20px;
+    margin: 0 auto;
+}
+
+#price td{
+    border-top: 1px dotted steelblue;
+    border-bottom: 1px dotted steelblue;
+    text-align: center;
+    padding: 20px;
+    color: #898989;
+    padding-right: 60px;
+}
+
+#price th{
+    text-align: center;
+    padding-right: 60px;
+}
+
+#price ul {
+    list-style-position: inside;
+    text-align: justify;
+    padding-left: 125px;
+    min-width: 200px;
+}
+
+/* Vyuzitie selektoru :first-child pre zmenu textu na bold specifikujuci ponukany pack v tabulke.*/
+#price li:first-child{
+    font-weight: bold;
+    list-style-type: none;
+}
+
+#price button{
+    border-style: solid;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    height: 50px;
+    width: 80px;
+    color: #4d4d4d;
+    font-weight: bold;
+    background-color: #f7f7f7;
+}
+
+#price button:hover{
+    background-color: steelblue;
+    color: white;
+}
+
+#price tbody tr:hover td{
+    background-color: white;
+    color: steelblue;
+}
+
+/*----------------------------------*/
+/*              REFS                */
+/*----------------------------------*/
+#refs .content{
+    text-align: center;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    height: 250px;
+}
+
+.refs-card{
+    color: white;
+    width: 300px;
+    max-width: 400px;
+    height: auto;
+    display: inline-block;
+    margin:0 8%;
+    vertical-align: top;
+}
+
+#refs blockquote{
+    background-color: #4d4d4d;
+    border-radius: 3%;
+    padding: 20px;
+    text-align: left;
+    color: #f7f7f7;
+}
+
+#refs .refs-card:hover blockquote{
+    background-color: steelblue;
+}
+
+#refs .refs-card:hover blockquote::after{
+    border-color: steelblue transparent transparent transparent;
+}
+
+/* Zmena farby uvodzoviek v bublinach po nadideni kurzoru nad bublinu pomocou selektoru :hover a ::before - kde su definovane uvodzovky. */
+#refs .refs-card:hover::before{
+    color: white;
+}
+
+#refs .refs-card:hover h3{
+    color: steelblue;
+}
+
+#refs h3{
+    font-size: 18px;
+    color: #bfbfbf;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 25px;
+    padding-right: 50px;
+}
+
+
+#refs img{
+    border-radius: 50%;
+    width: 60px;
+    float: left;
+    margin-left: 20px;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+/*------------------------*/
+/* Bubliny v sekcii #refs */
+/*------------------------*/
+
+/* Nasledujuci kod vlozi " (uvodzovku), naformatuje a urci jej poziciu.*/
+.refs-card::before{
+    content: "\"";
+    font-style: italic;
+    color: steelblue;
+    font-size: 100px;
+    position: absolute;
+    display: block;
+    margin-left: 40px;
+    margin-top: 11px;
+}
+
+#refs blockquote{
+    padding-left: 40px;
+}
+
+/* Napozicovanie a vytvorenie tvaru trojuholnika pomocou obdlznika, velkosti borderu a zafarbenia borderu, ktory vycnieva z bubliny*/
+#refs blockquote:after{
+    content: " ";
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #4d4d4d transparent transparent transparent;
+    top: 60px;
+    right: 127px;
+}
+
+/*----------------------------------*/
+/*              CONTACT             */
+/*----------------------------------*/
+
+/* V sekcii #contact pre napozicovanie mapy a formularovych policok bol vyuzity grid a grid-template-columns s jednotkou fr, ktory vyuzije dostupne miesto */
+/* podla hodnoty fr. */
+/* Pre napozicovanie formularovych policok bol vyuzity grid a grid-column-start, grid-column-end, pomocou ktorych je definovana pozicia (stlpec a riadok) v gride. */
+#contact{
+    border-top: 2px dashed #898989;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+#contact .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    column-gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#contact h2 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 60px;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+form {
+    height: 400px;
+	display: grid;
+	gap: 20px;
+	padding-top: 20px;
+    padding-right: 0;
+}
+
+#map {
+	height: 400px;
+}
+
+#contact input, textarea{
+    border-style: solid;
+    border: 2px solid steelblue;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Vyuzitie selektoru :focus pre zvyraznenie aktivneho policka formularu. */
+#contact input:focus, textarea:focus {
+    outline: solid green 1px ;
+    border: solid green 2px;
+    margin: 0;
+}
+
+input[name=name], input[name=email], input[name=subject], textarea[name=message]{
+    color: steelblue;
+}
+textarea[name=message]{
+    width: 580px;
+}
+
+input[name=name] {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+input[name=email] {
+	grid-row: 1;
+	grid-column: 2;
+}
+
+textarea[name=message] {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+input[name=subject]{
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+#contact-submit {
+    grid-column-start: 1;
+	grid-column-end: 3;
+	background-color: steelblue;
+    color: #f7f7f7;
+    justify-self: center;
+	width: 50%;
+}
+
+#contact #contact-submit:hover{
+    background-color: green;
+    border: solid green 2px;
+}
+
+/* Nevalidny vstup emailu*/
+#contact form input:invalid{
+    color: red;
+}
+
+/*----------------------------------*/
+/*              FOOTER              */
+/*----------------------------------*/
+
+/* Footer pre zarovnanie textov na pravu a lavu stranu vyuziva flex, float:left a float:right*/
+#footer{
+    height: 115px;
+    color: #898989;
+    background-color: black;    
+}
+
+#footer .content{
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+#footer a{
+    color: steelblue;
+    text-decoration: none;
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 115px;
+}
+
+#footer .content span:first-child{
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 115px;
+}
+
+/*----------------------------------*/
+/*     Zmeny velkosti obrazovky     */
+/*----------------------------------*/
+
+@media screen and (max-width: 768px) {
+	.content {
+		width: 768px;
+	}
+}
