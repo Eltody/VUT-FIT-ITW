@@ -1,0 +1,825 @@
+/* ----------- General ----------- */
+/* vseobecne pravidla */
+body {
+	color:#777;
+	background: #f7f7f7;
+	font-size: 16px;
+	line-height: 1.6em;
+	font-weight: 300;
+	text-shadow: none;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	 font-size: 62.5%;
+	 font-family: sans-serif;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Lato', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	color:#222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-style: normal;
+	margin: 0 0 20px 0;
+}
+
+h1 {
+	font-size: 40px; 
+	line-height: 30px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+
+.text-bold {
+	font-weight: 900;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+article, figure, footer, header, menu, nav, section {
+	display: block;
+}
+
+figure {
+	margin: 0;
+}
+
+:focus {
+	outline: none;
+}
+
+.row {
+	z-index: 9999;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.content, .container {
+	overflow: hidden;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.pad40 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.pad-bot30 {
+	padding-bottom: 30px;
+}
+
+.mar-bot40 {
+	margin-bottom: 40px;
+}
+
+.section {
+	margin:0;
+	padding: 80px 0 60px 0;
+}
+
+/* ----------- ----------- ----------- */
+
+/* ----------- Navbar and hamburger menu ----------- */
+
+.menu-items{
+	list-style-type: none;
+	line-height: 50px;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-items a{
+	padding: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.menu-items li{
+	height: 50px;
+}
+
+.menu-items li a{
+	color: white;
+	font-weight: bold;
+}
+
+#menu{
+	padding: 0;
+    margin: 20px 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	background: #202020;
+    width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.fa-bars{				/* Hamburger button icon */
+	display: block;
+	margin-top: 15px;
+	color: #fff;
+}
+
+button{					/* Hamburger button icon */
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.nav {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	float: right;
+	margin: 7.5px -15px;
+}
+
+.navbar {
+	height: 50px;
+	background-color: rgba(0,0,0,0.3);
+	display: block;
+	text-align: center;
+	margin-bottom: 0;
+	padding-bottom:0;
+}
+
+.navbar {                  /* Vzdy zobrazene menu v priebehu scrollovania po stranke pomocou position: fixed */
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+}
+
+.navbar-brand {
+	float: left;
+	padding: 15px 15px;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.navbar .navbar-collapse {
+	margin-bottom: 0;
+	padding-bottom:0;
+}
+
+.container:after,
+.row:after,
+.nav:after,
+.navbar:after,
+.navbar-header:after,
+.navbar-collapse:after{
+  clear: both;
+}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after,
+.nav:before,
+.nav:after,
+.navbar:before,
+.navbar:after,
+.navbar-header:before,
+.navbar-header:after,
+.navbar-collapse:before,
+.navbar-collapse:after{
+  display: table;
+  content: " ";
+}
+
+.nav li {
+	height: 100%;
+	line-height: 100%;
+	margin-bottom: 0;
+	padding-bottom:0;
+}
+
+.nav > li > a {
+	display: table-cell;
+	height: 100%;
+	line-height: 100%;
+	color: #fff;
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+}
+
+.nav>li>a:hover{
+	color: 	#C41E3A;
+	background: none;
+}
+
+h1 a.navbar-brand {
+	font-size: 24px;
+	color: #fff;
+	font-weight: 900;
+	text-shadow: none;
+}
+
+.navbar-brand {
+	padding: 0;
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+.navbar-brand:hover {
+	color: #ffe135;
+}
+
+.navbar-brand img {
+	vertical-align: middle;
+}
+
+.navbar-toggle {				 /* Formatovanie hamburger buttonu */
+	position: relative;
+	float: right;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	padding: 0;
+	margin: 0;
+	width: 80px;
+}
+
+.navbar-collapse.in {
+	margin-top: -5px !important;
+}
+
+/* ----------- ----------- ----------- */
+
+.section-header, .reactors-text{
+	text-align: center;
+}
+.section-header h2, .reactors-text h2{
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/* ----------- Reactors ----------- */
+
+.reactors-text{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+.reactors img{
+	border-radius: 50%;
+	height: 150px;
+	padding-bottom: 15px;
+}
+
+.reactors{
+	padding: 5px 10px 0 10px;
+}
+
+.reactors:hover{					/* pri prechode mysou nad jednotlive sekcie reaktorov sa zvyrazni vyber pomocou zobrazenia tienov */
+	box-shadow: 0 0 7px rgba(33,33,33,.2); 
+}
+
+/* ----------- ----------- ----------- */
+
+/* ----------- Citations ----------- */
+
+#citation1, #citation2, #citation3{
+	padding: 200px 0 60px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right;
+	background-color: black;
+}
+#citation1{	
+	background-image: url(../img/tony_stark_citation2.jpg);
+}
+
+#citation2{	
+	background-image: url(../img/tony_stark_citation3.jpg);
+}
+
+#citation3{	
+	background-image: url(../img/tony_stark_citation4.jpg);
+}
+
+#citation1 h5, #citation2 h5, #citation3 h5{
+	font-size: 22px;
+	color: rgb(144, 144, 144);
+}
+
+.header-citation {
+	padding: 200px 0 60px;
+	color: #fdfdfd;
+	background-image: url(../img/background_header.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: black;
+	background-position: right;
+}
+
+.header-citation::after {
+	background-color: black;
+}
+
+.header-citation h2.slogan {
+	color: #fff;
+	font-size: 64px;
+	font-weight: 900;
+	font-family: IronManFont;
+	font-weight: normal;
+}
+
+/* ----------- ----------- ----------- */
+
+.collapse {
+	display: none;
+}
+
+.align-center pad-top40 pad-bot40 h5{
+	color: #fff;
+	font-size: 18px;
+	font-family: Georgia, sans-serif;
+	line-height: 1.5em;
+}
+
+/* ----------- Family ----------- */
+
+.member-photo-father img{
+	border-radius: 50%;
+	width: 80%;
+	padding-bottom: 10px;
+}
+
+.member-photo-mother img{
+	border-radius: 50%;
+	width: 85%;
+	padding-bottom: 10px;
+}
+
+.member-photo-assistant img{
+	border-radius: 50%;
+	width: 84%;
+	padding-bottom: 10px;
+}
+
+.member-photo-butler img{
+	border-radius: 50%;
+	width: 85%;
+	padding-bottom: 10px;
+}
+
+.family-detail h4 {
+	font-weight: 700;
+	color:rgb(144, 144, 144);
+}
+
+.family-member:hover h4, .family-member:hover span{	/* pri prechode mysou nad jednotlive fotografie sa zvyrazni farba pisma */
+	color: black;
+} 
+
+/* ----------- ----------- ----------- */
+
+/* ----------- Becoming Iron Man ----------- */
+
+.portfolio-items article{
+    margin-bottom: 30px;
+}
+
+#portfolio img  {
+	width:100%;
+}
+
+#portfolio article p {
+	margin-bottom:1.45em;
+}
+
+.portfolio-items article img {
+	width:100%;
+} 
+
+.portfolio-item {
+	display: block;
+	position: relative;
+	transition: all 0.2s ease-in-out;
+}
+
+.portfolio-item img {					/* nascalovanie jednotlivych fotiek oblekov na jednotnu velkost pomocou object-fit: scale-down */ 
+	transition: all 300ms linear;
+	height: 400px;
+	object-fit: scale-down;
+}
+
+.portfolio-item .portfolio-desc {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+	left: 0;
+	top: 0;
+	color: rgba(220, 220, 220);
+}
+
+.portfolio-item:hover img {
+	opacity: 0.4;
+}
+
+.folio-info a{
+	font-family: IronManFont;
+	font-size: 40px;
+}
+
+.portfolio-item:hover a{
+	color: black !important; 
+}
+
+.portfolio-item:hover .portfolio-desc {
+	padding-top: 20%;
+	height: 100%;
+    transition: all 200ms ease-in-out 0s;
+	opacity: 1;
+}
+
+.portfolio-item .portfolio-desc a {
+	color: #fff;
+}
+.portfolio-item .portfolio-desc a:hover {
+	text-decoration: none;
+}
+.portfolio-item .portfolio-desc .folio-info {
+	top:-20px;
+	padding: 30px;
+	height: 0;
+    opacity: 0;
+    position: relative;
+}
+
+.portfolio-item:hover .folio-info{		/* pri prechode mysou nad jednotlive fotografie oblekov sa zobrazi text nazvu obleku */
+	height: 100%;
+    opacity: 1;
+    transition: all 500ms ease-in-out 0s;
+	top:5px;
+}
+
+.portfolio-item .portfolio-desc .folio-info h5 {
+	text-transform: uppercase;
+}
+
+.portfolio-item .portfolio-desc .folio-info p {
+	color: #ffffff;
+	font-size: 12px;
+}
+
+/* ----------- ----------- ----------- */
+
+/* ----------- Iron Man font ----------- */
+@font-face {									/* pouzitie custom fontu zo suboru */
+	font-family: IronManFont;
+	src: url(../Stark.otf);
+}
+/* ----------- ----------- ----------- */
+
+.nonClickable{
+	pointer-events: none;
+	cursor: default;
+}
+
+.pad-bot40 span.author{
+	color: #fff;
+	font-weight: 700;
+}
+
+.pad-bot40 h5{
+	color: #fff;
+	font-size: 18px;
+	font-family: Georgia, sans-serif;
+	line-height: 1.5em;
+}	
+
+.becoming-iron-man-text p, .personality-text p{
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+/* ----------- Footer ----------- */
+
+#footer {
+	background: #242424;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .copyright {
+	text-align: center;
+}
+
+.social-networks a.icoFacebook:hover {			/* zmena farby ikon pri prechode mysou popri rotacii ikon */
+	background-color:#3B5998;
+}
+
+.social-networks a.icoInstagram:hover {
+	background-color: #9400D3;
+}
+
+.social-networks a.icoGithub:hover {
+	background-color: #7800ac;
+}
+
+.social-networks li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+
+.social-networks li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-networks li a:hover i, .triggeredHover {	/* rotácia ikon sociálnych sietí na hover pomocou rotate */
+	transform: rotate(360deg);
+	transition: all 0.45s;
+}
+
+.social-networks i {
+	color: #fff;
+	transition: all 0.8s;
+}
+
+ul.social-networks {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+
+ul.social-networks li {
+	display: inline;
+	margin: 0 5px;
+}
+
+/* ----------- ----------- ----------- */
+
+/* ----------- Scroll Up Button ----------- */
+
+a.scrollup{				/* tlacidlo, ktore funguje ako scrollup z kazdej casti stranky pomocou position:fixed */
+	height:32px;
+	width:32px;
+	color:#fff;
+	font-size:18px;
+	line-height:32px;
+	text-align:center;
+	text-decoration:none;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	z-index:9999;
+	opacity:0.5;
+}
+
+a.scrollup:hover{		/* zmena farby tlacitka pre scrollup pri prechode mysou */ 
+	opacity:1;
+	color:#fff;
+}
+
+/* ----------- ----------- ----------- */
+
+.family-col, .portfolio-col, .reactors-col, .col-md-6, .citation1-col {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+/* ----------- Media queries ----------- */
+@media (min-width: 959px) and (max-width: 1199px) {
+	.reactors{
+		vertical-align: top;
+		display: inline-block;
+		text-align: center;
+	}
+	.member-photo-father img, .member-photo-mother img, .member-photo-assistant img, .member-photo-butler img{
+		border-radius: 50%;
+		width: 200px;
+		padding-bottom: 10px;
+	}
+}
+
+@media only screen and (min-device-width : 979px) and (max-device-width : 1024px)  {
+	.reactors{
+		vertical-align: top;
+		display: inline-block;
+		text-align: center;
+	}
+	.member-photo-father img, .member-photo-mother img, .member-photo-assistant img, .member-photo-butler img{
+		border-radius: 50%;
+		width: 200px;
+		padding-bottom: 10px;
+	}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.reactors{
+		vertical-align: top;
+		display: inline-block;
+		text-align: center;
+	}
+	.member-photo-father img, .member-photo-mother img, .member-photo-assistant img, .member-photo-butler img{
+		border-radius: 50%;
+		width: 200px;
+		padding-bottom: 10px;
+	}
+
+}
+@media (max-width: 767px) {
+
+	.navbar.navbar {
+		background-color:rgba(0,0,0,1);
+	}
+	.navbar .navbar-collapse ul.nav {
+		background-color: #444;
+		width: 100%;
+		float: none;
+		margin:0;
+		padding:0;
+	}
+	.navbar .navbar-collapse ul.nav li {
+		border-bottom: 1px solid #666;
+	}
+	section.header-citation {
+		padding-top: 80px;
+	}
+	
+	.family-member,.reactors-col {
+		margin-bottom: 30px;
+	}
+	
+	.stats .family-col {
+		margin-bottom: 30px;
+	}
+
+	.member-photo-father img, .member-photo-mother img, .member-photo-assistant img, .member-photo-butler img{
+		border-radius: 50%;
+		width: 200px;
+		padding-bottom: 10px;
+	}
+
+	.reactors{
+		vertical-align: top;
+		display: inline-block;
+		text-align: center;
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {             /* Zobrazi polozky navbaru vedla seba */
+
+		margin: 5px 0;
+	  }
+	  .nav > li {
+		float: left;
+	  }
+	  .nav > li > a {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	  }
+	  .nav.navbar-right:last-child {
+		margin-right: -15px;
+	  }
+
+	.container {
+	  width: 750px;
+	}
+
+	.navbar-header {
+		float: left;
+	}
+
+	.navbar-toggle {		/* Schova neziaduce zobrazenie hamburger buttonu */
+		display: none;
+	}
+
+	.navbar-collapse {		/* Zobrazenie menu */
+		width: auto;
+		border-top: 0;
+		box-shadow: none;
+	}
+
+	.navbar-collapse.collapse {
+		display: block !important;
+		height: auto !important;
+		padding-bottom: 0;
+		overflow: visible !important;
+	}
+
+	.navbar-collapse.in {
+		overflow-y: visible;
+	}
+
+}
+  
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+
+	.family-col, .portfolio-col, .col-md-6 {
+		float: left;
+	}
+	
+	.portfolio-col {
+		width: 33.33333333333333%;
+	}
+
+	.family-col {
+		width: 25%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+
+	.reactors-col, .citation1-col {
+		float: left;
+	}
+
+	.citation1-col {
+		width: 100%;
+	}
+
+	.reactors-col {
+		width: 33.33333333333333%;
+	}
+
+	.reactors{
+		vertical-align: top;
+		display: inline-block;
+		text-align: center;
+	}
+}
+
+@-ms-viewport {
+	width: device-width;
+}
